@@ -15,6 +15,6 @@ class SignupCountLoader < GraphQL::Batch::Loader
       .where(id: event_ids)
       .joins(:signups)
       .group(:id)
-      .pluck(:id, 'COUNT(*)')
+      .pluck(:id, Arel.sql('COUNT(*)'))
   end
 end
