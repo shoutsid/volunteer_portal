@@ -3,7 +3,7 @@ class OmniauthCallbacksController < ActionController::Base
   REQUIRED_PARAMS = ['email', 'first_name', 'last_name'].freeze
   METADATA_IGNORED_PARAMS = (REQUIRED_PARAMS + ['fingerprint']).freeze
 
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :exception, prepend: true
   layout 'application'
 
   skip_before_action :verify_authenticity_token, only: :callback
@@ -31,7 +31,7 @@ class OmniauthCallbacksController < ActionController::Base
       return_to ? (redirect_to return_to) : (redirect_to :portal)
     end
   rescue ActiveRecord::RecordInvalid => e
-    render text: e.message, status: :forbidden
+    render plain: e.message, status: :forbidden
   end
 
   def failure

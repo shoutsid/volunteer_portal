@@ -2,7 +2,7 @@
 # deploy to determine if the rails restart was successful or not.
 # rubocop:disable Rails/ApplicationController
 class PingController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :exception, prepend: true
 
   def index
     render plain: 'OK'

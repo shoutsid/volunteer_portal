@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '5.2.8.1'
+gem 'rails', '6.0.6.1'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -21,7 +21,7 @@ gem 'attr_encrypted'
 gem 'soft_deletion'
 gem 'webpacker', '~> 5'
 gem 'uglifier'
-gem "sass-rails", "= 5.0.7"
+gem "sass-rails", "~> 6.0"
 gem 'active_record_union'
 gem 'rack-attack'
 gem 'google-api-client', '~> 0.53.0'
@@ -44,13 +44,13 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'testrbl', require: false
-  gem "database_cleaner", "~> 1.0", require: false
+  gem "database_cleaner", "~> 1.0"
   gem 'rubocop-rails', require: false
 end
 
 group :test do
   gem 'webmock', require: false
-  gem 'minitest-rails', require: false
+  gem "minitest-rails", "~> 6.0.2"
   gem 'minitest-ci', require: false
   gem 'maxitest', require: false
   gem 'mocha', require: false
@@ -59,6 +59,11 @@ group :test do
   gem 'rails-controller-testing'
 end
 gem "ffi", "~> 1.16.0"
-gem "responders", "~> 2.0"
+gem "responders", "~> 3.1"
 gem "thor", "~> 1.2.0"
 gem "jquery-ui-rails", "~> 6.0"
+gem "sprockets-rails", "~> 3.4.0"
+gem "globalid", "~> 1.1.0"
+gem "sprockets", "~> 3.7"
+gem "zeitwerk", "~> 2.6.0"
+gem "nokogiri", "~> 1.12.0"
