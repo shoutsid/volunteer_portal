@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby File.read('.ruby-version').strip
+ruby '>= 2.7.1'
 
 gem 'rails', '~> 5.2.4.4'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
@@ -58,3 +58,4 @@ group :test do
   gem 'single_cov', '1.6.0', require: false
   gem 'rails-controller-testing'
 end
+gem "ffi", "~> 1.16.0"
