@@ -5,10 +5,10 @@ class IndividualEvent < ApplicationRecord
 
   has_soft_deletion default_scope: true
 
-  belongs_to :user
-  belongs_to :organization
-  belongs_to :event_type
-  belongs_to :office
+  belongs_to :user, optional: true
+  belongs_to :organization, optional: true
+  belongs_to :event_type, optional: true
+  belongs_to :office, optional: true
 
   has_many :individual_event_tags, dependent: :destroy
   has_many :tags, through: :individual_event_tags

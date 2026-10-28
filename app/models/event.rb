@@ -14,10 +14,10 @@ class Event < ApplicationRecord
   has_many :tags, through: :event_tags
 
   belongs_to :organization
-  belongs_to :event_type
+  belongs_to :event_type, optional: true
   belongs_to :type, class_name: 'EventType', foreign_key: 'event_type_id', inverse_of: :events
   belongs_to :office
-  belongs_to :event_group
+  belongs_to :event_group, optional: true
 
   validates :organization, :title, :type, :starts_at, :ends_at, :capacity, :location, :office, presence: true
   validates :capacity, numericality: { only_integer: true }

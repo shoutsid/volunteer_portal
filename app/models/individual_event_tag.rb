@@ -1,4 +1,4 @@
 class IndividualEventTag < ApplicationRecord
-  belongs_to :individual_event
-  belongs_to :tag
+  belongs_to :individual_event, optional: true
+  belongs_to :tag, optional: true
 end

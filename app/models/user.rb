@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :individual_events, dependent: :destroy
   has_one :user_preference, dependent: :destroy
 
-  belongs_to :role
+  belongs_to :role, optional: true
   belongs_to :office
 
   attr_accessor :google_token
