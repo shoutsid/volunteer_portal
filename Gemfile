@@ -2,15 +2,15 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '6.0.6.1'
+gem 'rails', '6.1.7.10'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
-gem 'pg', '~> 1.2' # https://github.com/rails/rails/issues/31673
+gem "pg", "~> 1.5.0"
 gem 'dotenv'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-saml'
-gem 'stronger_parameters'
+gem "stronger_parameters", "~> 2.23.1"
 gem 'graphql', '~> 1.12'
 gem 'graphql-batch'
 gem 'graphiql-rails'
@@ -50,7 +50,7 @@ end
 
 group :test do
   gem 'webmock', require: false
-  gem "minitest-rails", "~> 6.0.2"
+  gem "minitest-rails", "~> 6.1.1"
   gem 'minitest-ci', require: false
   gem 'maxitest', require: false
   gem 'mocha', require: false
@@ -67,3 +67,5 @@ gem "globalid", "~> 1.1.0"
 gem "sprockets", "~> 3.7"
 gem "zeitwerk", "~> 2.6.0"
 gem "nokogiri", "~> 1.12.0"
+gem "mimemagic", "= 0.3.9"
+gem "rake", ">= 12.2"

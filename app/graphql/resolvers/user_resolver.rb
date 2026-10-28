@@ -106,7 +106,7 @@ module UserResolver
       scope
         .joins(:events)
         .group(:id)
-        .order(order)
+        .order(Arel.sql(order))
     end
   end
 end

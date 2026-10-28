@@ -31,6 +31,6 @@ class EventHoursLoader < GraphQL::Batch::Loader
     scope
       .where(signups: { user_id: user_ids })
       .group('"signups"."user_id"')
-      .pluck('"signups"."user_id"', 'SUM((EXTRACT(EPOCH FROM "events"."ends_at") - EXTRACT(EPOCH FROM "events"."starts_at")) / 60)')
+      .pluck(Arel.sql('"signups"."user_id"'), Arel.sql('SUM((EXTRACT(EPOCH FROM "events"."ends_at") - EXTRACT(EPOCH FROM "events"."starts_at")) / 60)'))
   end
 end
