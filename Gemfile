@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '8.0.5.1'
+gem 'rails', '8.1.0'
+gem 'json', '~> 2.7'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -14,7 +15,7 @@ gem "stronger_parameters", "~> 2.23.1"
 gem "graphql", "~> 1.13"
 gem 'graphql-batch'
 gem 'graphiql-rails'
-gem "goldiloader", "~> 5.4.0"
+gem "goldiloader", "~> 6.0.1"
 gem 'rollbar'
 gem 'activerecord-session_store'
 gem "attr_encrypted", "~> 4.2"
@@ -50,7 +51,7 @@ end
 
 group :test do
   gem 'webmock', require: false
-  gem "minitest-rails", "~> 8.0.0"
+  gem "minitest-rails", "~> 8.1.0"
   gem 'minitest-ci', require: false
   gem "mocha", "~> 2.1"
   gem 'timecop', require: false
