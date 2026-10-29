@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '>= 2.7.1'
 
 gem 'rails', '8.1.0'
+gem 'json', '~> 2.7'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
