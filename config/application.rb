@@ -44,7 +44,7 @@ module Portal
 
     # Load all graphql types
     config.autoload_paths.concat [
-      Rails.root.join('app/graphql/types'),
+      # removed: app/graphql/types is the Types namespace under app/graphql; Rails 7's Zeitwerk manages app/graphql, and a nested root hides it
       Rails.root.join('app/graphql/loaders'),
       Rails.root.join('app/graphql/resolvers')
     ]

@@ -11,12 +11,12 @@
   <div class="login-form">
     <% if ENV['GOOGLE_CLIENT_ID'] %>
       <p>
-        <%= button_to 'Sign in with Google', '/auth/google_oauth2', class: 'signin-btn google' %>
+        <%= button_to 'Sign in with Google', '/auth/google_oauth2', class: 'signin-btn google', method: :post %>
       </p>
     <% end %>
     <% if ENV['SAML_ISSUER'] %>
       <p>
-        <%= button_to 'Sign in with SAML', '/auth/saml', class: 'signin-btn okta' %>
+        <%= button_to 'Sign in with SAML', '/auth/saml', class: 'signin-btn okta', method: :post %>
       </p>
     <% end %>
   </div>
