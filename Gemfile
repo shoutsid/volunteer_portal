@@ -52,7 +52,6 @@ group :test do
   gem 'webmock', require: false
   gem "minitest-rails", "~> 7.0.1"
   gem 'minitest-ci', require: false
-  gem 'maxitest', require: false
   gem 'mocha', require: false
   gem 'timecop', require: false
   gem 'single_cov', '1.6.0', require: false
