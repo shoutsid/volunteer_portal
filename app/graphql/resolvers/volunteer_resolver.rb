@@ -29,7 +29,8 @@ module VolunteerResolver
       events_scope, individual_events_scope = scope_with_time(events_scope, individual_events_scope, args[:after], args[:before])
       events_scope, individual_events_scope = scope_with_office_id(events_scope, individual_events_scope, office_id)
 
-      all_events_scope = events_scope.union_all(individual_events_scope)
+      union_sql = "(#{events_scope.to_sql} UNION ALL #{individual_events_scope.to_sql}) AS users"
+      all_events_scope = User.unscoped.from(union_sql)
       all_events_scope = all_events_scope.select("#{user_entry},  SUM(\"duration\") AS \"duration\"").group(user_entry)
 
       all_events_scope = scope_with_count(all_events_scope, args[:count])
