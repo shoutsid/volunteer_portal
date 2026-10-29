@@ -31,7 +31,7 @@ describe EventResolver do
       assert_nil e.deleted_at
       assert_equal 'new', e.title
       assert_equal 10, e.capacity
-      assert_equal timestamp.to_s(:db), e.starts_at.to_s(:db)
+      assert_equal timestamp.to_fs(:db), e.starts_at.to_fs(:db)
     end
   end
 
@@ -60,7 +60,7 @@ describe EventResolver do
 
       assert_equal 'new', e.title
       assert_equal 10, e.capacity
-      assert_equal timestamp.to_s(:db), e.starts_at.to_s(:db)
+      assert_equal timestamp.to_fs(:db), e.starts_at.to_fs(:db)
     end
   end
 

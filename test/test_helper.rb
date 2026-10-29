@@ -16,7 +16,6 @@ require 'mocha/minitest'
 require 'minitest/rails'
 require 'webmock/minitest'
 require 'timecop'
-require 'maxitest/autorun'
 
 ENV["ZENDESK_SUBDOMAIN"] = "volunteer"
 ENV["ZENDESK_API_HOST"]  = "example.com"
@@ -25,10 +24,10 @@ ENV["ZENDESK_API_KEY"]   = "123"
 
 # Use ActiveSupport::TestCase for everything that was not matched before
 # this is needed to test presenters
-MiniTest::Spec::DSL::TYPES[-1] = [//, ActiveSupport::TestCase]
+Minitest::Spec::DSL::TYPES[-1] = [//, ActiveSupport::TestCase]
 
 class ActiveSupport::TestCase
-  extend MiniTest::Spec::DSL
+  extend Minitest::Spec::DSL
 
   fixtures :all
 

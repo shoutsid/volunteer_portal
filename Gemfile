@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '7.0.10'
+gem 'rails', '7.1.6'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -14,7 +14,7 @@ gem "stronger_parameters", "~> 2.23.1"
 gem 'graphql', '~> 1.12'
 gem 'graphql-batch'
 gem 'graphiql-rails'
-gem 'goldiloader', '~> 4.0'
+gem "goldiloader", "~> 4.2.1"
 gem 'rollbar'
 gem 'activerecord-session_store'
 gem "attr_encrypted", "~> 4.2"
@@ -44,16 +44,15 @@ end
 group :development, :test do
   gem 'byebug'
   gem 'testrbl', require: false
-  gem "database_cleaner", "~> 1.0"
+  gem "database_cleaner", "~> 2.1"
   gem 'rubocop-rails', require: false
 end
 
 group :test do
   gem 'webmock', require: false
-  gem "minitest-rails", "~> 7.0.1"
+  gem "minitest-rails", "~> 7.1.1"
   gem 'minitest-ci', require: false
-  gem 'maxitest', require: false
-  gem 'mocha', require: false
+  gem "mocha", "~> 2.1"
   gem 'timecop', require: false
   gem 'single_cov', '1.6.0', require: false
   gem 'rails-controller-testing'
@@ -66,7 +65,10 @@ gem "sprockets-rails", "~> 3.4.0"
 gem "globalid", "~> 1.1.0"
 gem "sprockets", "~> 3.7"
 gem "zeitwerk", "~> 2.6.0"
-gem "nokogiri", "~> 1.12.0"
+gem "nokogiri", "~> 1.15.7"
 gem "mimemagic", "= 0.3.9"
 gem "rake", ">= 12.2"
 gem "logger", "~> 1.4"
+gem "minitest", "~> 5.25.0"
+gem "connection_pool", "~> 2.5"
+gem "rdoc", "~> 6.3.0"

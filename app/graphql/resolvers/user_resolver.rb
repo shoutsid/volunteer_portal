@@ -56,12 +56,12 @@ module UserResolver
 
       if after
         scope = scope.where('"events"."starts_at" > ?', Time.zone.at(after))
-        individual_events_join << %( AND "individual_events"."date" > '#{Time.zone.at(after).to_date.to_s(:db)}')
+        individual_events_join << %( AND "individual_events"."date" > '#{Time.zone.at(after).to_date.to_fs(:db)}')
       end
 
       if before
         scope = scope.where('"events"."starts_at" < ?', Time.zone.at(before))
-        individual_events_join << %( AND "individual_events"."date" < '#{Time.zone.at(before).to_date.to_s(:db)}')
+        individual_events_join << %( AND "individual_events"."date" < '#{Time.zone.at(before).to_date.to_fs(:db)}')
       end
 
       scope.joins(individual_events_join)
