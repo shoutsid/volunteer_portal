@@ -11,7 +11,7 @@ gem 'dotenv'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-saml'
 gem "stronger_parameters", "~> 2.23.1"
-gem 'graphql', '~> 1.12'
+gem "graphql", "~> 1.13"
 gem 'graphql-batch'
 gem 'graphiql-rails'
 gem "goldiloader", "~> 5.4.0"
