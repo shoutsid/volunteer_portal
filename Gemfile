@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '7.2.4'
+gem 'rails', '8.0.5.1'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -11,7 +11,7 @@ gem 'dotenv'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-saml'
 gem "stronger_parameters", "~> 2.23.1"
-gem 'graphql', '~> 1.12'
+gem "graphql", "~> 1.13"
 gem 'graphql-batch'
 gem 'graphiql-rails'
 gem "goldiloader", "~> 5.4.0"
@@ -50,7 +50,7 @@ end
 
 group :test do
   gem 'webmock', require: false
-  gem "minitest-rails", "~> 7.1.1"
+  gem "minitest-rails", "~> 8.0.0"
   gem 'minitest-ci', require: false
   gem "mocha", "~> 2.1"
   gem 'timecop', require: false
