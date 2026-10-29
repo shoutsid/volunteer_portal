@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '7.1.6'
+gem 'rails', '7.2.4'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -14,7 +14,7 @@ gem "stronger_parameters", "~> 2.23.1"
 gem 'graphql', '~> 1.12'
 gem 'graphql-batch'
 gem 'graphiql-rails'
-gem "goldiloader", "~> 4.2.1"
+gem "goldiloader", "~> 5.4.0"
 gem 'rollbar'
 gem 'activerecord-session_store'
 gem "attr_encrypted", "~> 4.2"
@@ -73,3 +73,4 @@ gem "minitest", "~> 5.25.0"
 gem "connection_pool", "~> 2.5"
 gem "rdoc", "~> 6.3.0"
 gem "sass", "~> 3.7"
+gem "database_cleaner-active_record", "~> 2.1"
