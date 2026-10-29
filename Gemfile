@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.7.1'
 
-gem 'rails', '6.1.7.10'
+gem 'rails', '7.0.10'
 gem 'rack-cors', '~> 1.1.1', require: 'rack/cors'
 gem 'puma'
 gem 'daemons', require: false
@@ -17,8 +17,8 @@ gem 'graphiql-rails'
 gem 'goldiloader', '~> 4.0'
 gem 'rollbar'
 gem 'activerecord-session_store'
-gem 'attr_encrypted'
-gem 'soft_deletion'
+gem "attr_encrypted", "~> 4.2"
+gem "soft_deletion", "~> 1.14.0"
 gem 'webpacker', '~> 5'
 gem 'uglifier'
 gem "sass-rails", "~> 6.0"
@@ -50,7 +50,7 @@ end
 
 group :test do
   gem 'webmock', require: false
-  gem "minitest-rails", "~> 6.1.1"
+  gem "minitest-rails", "~> 7.0.1"
   gem 'minitest-ci', require: false
   gem 'maxitest', require: false
   gem 'mocha', require: false
@@ -69,3 +69,4 @@ gem "zeitwerk", "~> 2.6.0"
 gem "nokogiri", "~> 1.12.0"
 gem "mimemagic", "= 0.3.9"
 gem "rake", ">= 12.2"
+gem "logger", "~> 1.4"
