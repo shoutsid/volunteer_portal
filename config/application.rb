@@ -10,9 +10,6 @@ if %w[test development].include?(Rails.env) && File.exist?(dotenv_file)
   Dotenv.load(dotenv_file)
 end
 
-# Silence rails 6 deprecations. These deprecations need to be fixed by rails 6
-ActiveSupport::Deprecation.silenced = true
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -22,6 +19,9 @@ module Portal
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # Silence rails 6 deprecations. These deprecations need to be fixed by rails 6
+    config.active_support.deprecation = :silence
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
