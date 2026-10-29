@@ -19,7 +19,7 @@ gem 'rollbar'
 gem 'activerecord-session_store'
 gem "attr_encrypted", "~> 4.2"
 gem "soft_deletion", "~> 1.14.0"
-gem 'webpacker', '~> 5'
+gem "webpacker", "~> 5.4"
 gem 'uglifier'
 gem "sass-rails", "~> 6.0"
 gem 'active_record_union'
@@ -72,3 +72,4 @@ gem "logger", "~> 1.4"
 gem "minitest", "~> 5.25.0"
 gem "connection_pool", "~> 2.5"
 gem "rdoc", "~> 6.3.0"
+gem "sass", "~> 3.7"
