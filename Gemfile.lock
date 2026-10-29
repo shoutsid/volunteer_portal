@@ -172,8 +172,6 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.4)
-    maxitest (3.6.0)
-      minitest (>= 5.0.0, < 5.14.0)
     memoist (0.16.2)
     memory_profiler (1.0.0)
     method_source (1.0.0)
@@ -393,7 +391,6 @@ DEPENDENCIES
   graphql-batch
   jquery-ui-rails (~> 6.0)
   logger (~> 1.4)
-  maxitest
   memory_profiler
   mimemagic (= 0.3.9)
   minitest-ci
