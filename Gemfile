@@ -43,7 +43,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'byebug'
+  gem "byebug", "~> 11.0"
   gem 'testrbl', require: false
   gem "database_cleaner", "~> 2.1"
   gem 'rubocop-rails', require: false
@@ -75,3 +75,5 @@ gem "connection_pool", "~> 2.5"
 gem "rdoc", "~> 6.3.0"
 gem "sass", "~> 3.7"
 gem "database_cleaner-active_record", "~> 2.1"
+gem "raindrops", "~> 0.20.0"
+gem "kgio", "~> 2.11.0"
